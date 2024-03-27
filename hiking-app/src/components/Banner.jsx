@@ -2,7 +2,7 @@ import React from 'react';
 import { Box, Typography, Card, CardContent, CardMedia } from '@mui/material';
 import bannerPhoto from '../assets/Brewster.jpg'
 import FetchWeather from './FetchWeather';
-import SwipeableTextMobileStepper from './SwipeableTextMobileStepper';
+
 
 function Banner() {
   return (

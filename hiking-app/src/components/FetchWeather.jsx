@@ -3,7 +3,7 @@ import WeatherData from "../components/WeatherData";
 
 function FetchWeather() {
   const [cityIndex, setCityIndex] = useState(0);
-  const cities = ["Dunedin", "Cromwell", "Alexandra", "Wanaka"];
+  const cities = ["Queenstown", "Cromwell", "Alexandra", "Wanaka"];
 
   useEffect(() => {
     const interval = setInterval(() => {

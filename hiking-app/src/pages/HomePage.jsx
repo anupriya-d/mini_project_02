@@ -1,4 +1,5 @@
 import Banner from "../components/Banner";
+import Footer from "../components/Footer"
 import SwipeableTextMobileStepper from "../components/SwipeableTextMobileStepper";
 
 export default function Homepage() {
@@ -8,6 +9,7 @@ export default function Homepage() {
       <div className="Homepage"></div>
 
       <Banner />
+      <Footer/>
     </>
   );
 }

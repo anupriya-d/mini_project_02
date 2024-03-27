@@ -1,6 +1,5 @@
 
-import WeatherData from "../components/WeatherData";
-import FetchWeather from "../components/FetchWeather";
+import { FetchWeatherAll } from "../components/FetchWeatherAll";
 export default function WeatherPage() {
    
     return (
@@ -10,7 +9,7 @@ export default function WeatherPage() {
         <h1>Weather</h1>
       
       </div>
-      <FetchWeather/>
+      <FetchWeatherAll/>
      
       </>
     );

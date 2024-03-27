@@ -42,5 +42,9 @@
 }
 
 
+.componentBox { border: 1px solid #aaa; margin-top: 1rem; margin-bottom: 1rem;color: #333; border-radius: 10px;
+  padding: 1rem; text-align: center; background: #f3f3f3; }
 
-
+li{
+  text-decoration: none;
+}

@@ -9,7 +9,7 @@ export function FetchWeatherAll() {
     <div>
       <Typography variant="h5" gutterBottom></Typography>
       <Grid container spacing={2}>
-        {cities.map((city, index) => (
+        {cities.map((city, index) => ( //iterate cities to dispaly each on seperate card
           <Grid item xs={12} md={3} key={index}>
             <Card variant="outlined">
               <CardContent>

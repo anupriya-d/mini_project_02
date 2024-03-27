@@ -17,7 +17,7 @@ const Footer = () => {
         <Typography variant="h6" align="center" gutterBottom>
           VISIT OTAGO
         </Typography>
-        <Typography variant="subtitle1" align="center" color="textSecondary">
+        <Typography variant="p" align="center" color="textSecondary">
           © {new Date().getFullYear()} VISIT OTAGO. All rights reserved.
         </Typography>
       </Container>

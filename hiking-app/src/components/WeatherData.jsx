@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 
 function WeatherData({ city }) {
-  const apiKey = "436c0534ff8a64f66e7aa7d10c43b902"; // Moved apiKey inside component
-  const country = 'NZ'; // Moved country inside component
+  const apiKey = "436c0534ff8a64f66e7aa7d10c43b902"; // apiKey inside 
+  const country = 'NZ'; // country given inside here since some cities can be found in other countires
   const [weatherData, setWeatherData] = useState(null);
 
   useEffect(() => {

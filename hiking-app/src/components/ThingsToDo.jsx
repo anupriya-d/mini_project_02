@@ -7,13 +7,18 @@ const ThingsToDo = ({ thingsToDo }) => {
   return (
   
        <div>
-      <Typography variant="h5" gutterBottom>
+      <Typography variant="h5"  sx={{ m: 2 }} gutterBottom>
         Things to do:
       </Typography>
       <Grid container spacing={2}>
         {thingsToDo.map((thing, index) => (
           <Grid item xs={12} sm={6} md={4} key={index}>
-            <Card variant="outlined">
+            <Card   variant="outlined" sx={{
+              transition: 'transform 0.3s',
+              '&:hover': {
+                transform: 'scale(1.05)',
+              },
+            }} >
               <CardContent>
               <CardMedia
               component="img"

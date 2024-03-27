@@ -1,6 +1,6 @@
 import Banner from "../components/Banner";
 import Footer from "../components/Footer"
-import SwipeableTextMobileStepper from "../components/SwipeableTextMobileStepper";
+import SwipeableTextMobileStepper1 from "../components/SwipeableTextMobileStepper1";
 
 export default function Homepage() {
   // Save in pages/Homepage.jsx
@@ -9,6 +9,7 @@ export default function Homepage() {
       <div className="Homepage"></div>
 
       <Banner />
+      <SwipeableTextMobileStepper1/>
       <Footer/>
     </>
   );

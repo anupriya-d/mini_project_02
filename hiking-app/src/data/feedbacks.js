@@ -8,11 +8,11 @@ export const feedbacks = [
   {
     id: 2,
     name: "Nethul",
-    review: "Nice Biking Aroud queenstown",
+    review: "Nice Biking Around queenstown",
   },
   {
     id: 3,
-    name: "Sarah",
-    review: "Breath taking vies at mount aspiring",
+    name: "Kevin",
+    review: "Breath taking viwes at mount aspiring",
   },
 ];

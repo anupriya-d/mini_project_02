@@ -7,17 +7,14 @@ function FetchWeather() {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      // Increment cityIndex cyclically
       setCityIndex((prevIndex) => (prevIndex + 1) % cities.length);
     }, 3 * 60 * 1000); // 3 minutes interval
 
-    // Clean up interval on component unmount
     return () => clearInterval(interval);
-  }, []); // Run effect only once on component mount
+  }, []);
 
   return (
     <div>
-
       <WeatherData city={cities[cityIndex]} />
     </div>
   );

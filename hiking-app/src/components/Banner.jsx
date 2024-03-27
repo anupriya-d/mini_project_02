@@ -14,10 +14,31 @@ function Banner() {
           alt="Hiking Banner"
           sx={{ height: '100%', width: '100%', objectFit: 'cover', borderRadius: 0 }}
         />
-        <CardContent sx={{ position: 'absolute', right:40 , top: 0, width: '100%', background: 'rgba(0, 0, 0, 0.5)', color: 'white', borderRadius: 0 }}>
+        <CardContent sx={{ position: 'absolute', right:0 , top: 0, width: '100%', background: 'rgba(0, 0, 0, 0.5)', color: 'white', borderRadius: 0 }}>
         <Box sx={{ textAlign: 'right', padding: '16px', }}>
           <FetchWeather/>
           </Box>
+        </CardContent>
+
+        <CardContent sx={{ position: 'absolute', right:0 , top:300, width: '100%', background: 'rgba(0, 0, 0, 0.5)', color: 'white', borderRadius: 0 }}>
+        <Box sx={{ textAlign: 'left', padding: '16px', }}>
+        <Typography variant="p" sx={{ padding: '16px', }}>
+              
+
+        There are few places in the world which will leave you with a lasting sense of difference.
+        </Typography>
+        <br/> 
+        <Typography variant="p" sx={{ padding: '16px', }}>
+        Central Otago is undoubtedly one of them from its landscapes, 
+        its seasons, its people, its products and experiences.
+        </Typography>
+        <br/>
+        
+        <Typography variant="p" sx={{ padding: '16px', }}>
+        Moment by moment it will quietly reveal its differences to you in subtle and unexpected ways.
+        </Typography>
+          
+        </Box>
         </CardContent>
 
     

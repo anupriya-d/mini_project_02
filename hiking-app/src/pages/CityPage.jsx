@@ -3,7 +3,7 @@ import React from 'react';
 import { useParams } from 'react-router-dom';
 import CityDetails from "../components/CityDetails";
 import ThingsToDo from "../components/ThingsToDo";
-import { placesData } from '../components/Places'; // Ensure correct import path
+import { placesData } from '../components/Places'; 
 
 export default function CityPage() {
     const { id } = useParams();
@@ -12,7 +12,7 @@ export default function CityPage() {
     return (
         <>
             <CityDetails />
-            
+
             <ThingsToDo thingsToDo={city.thingsToDo} />
         </>
     );

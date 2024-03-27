@@ -9,10 +9,11 @@ export default function Homepage() {
     <div className="Homepage">
   
     </div>
+    <SwipeableTextMobileStepper></SwipeableTextMobileStepper>
    <Banner/>
 
 
-   <SwipeableTextMobileStepper/>
+  
     </>
   );
 }

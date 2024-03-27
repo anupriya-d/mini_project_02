@@ -1,6 +1,6 @@
 import React from 'react';
 import { Card, CardContent, Typography ,Grid,CardMedia} from '@mui/material';
-import { placesData } from './Places';
+
 
 
 const ThingsToDo = ({ thingsToDo }) => {
@@ -21,7 +21,7 @@ const ThingsToDo = ({ thingsToDo }) => {
               image={thing.image}
               alt={thing.title}/>
                 <Typography variant="h6" component="h2" gutterBottom>
-                  {thing.title}
+                  {thing.place}
                 </Typography>
                 <Typography variant="body2" color="textSecondary">
                   {thing.description}

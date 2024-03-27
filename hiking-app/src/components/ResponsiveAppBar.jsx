@@ -9,10 +9,9 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
 import Avatar from '@mui/material/Avatar';
 import MenuItem from '@mui/material/MenuItem';
-import AdbIcon from '@mui/icons-material/Adb';
 import { NavLink } from 'react-router-dom';
 import { pages } from '../pages/pages';
-
+import campingLogo from '../assets/camping.png'
 
 
 
@@ -32,7 +31,11 @@ function ResponsiveAppBar() {
     <AppBar position="static">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
+        <img
+            src={campingLogo}
+            alt="Camping Logo"
+            style={{ width: 40, height: 40, marginRight: 10, display: { xs: 'flex', md: 'none' } }}
+          />
           <Typography
             variant="h6"
             noWrap
@@ -85,7 +88,7 @@ function ResponsiveAppBar() {
               ))}
             </Menu>
           </Box>
-          <AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
+   
           <Typography
             variant="h5"
             noWrap
@@ -110,13 +113,6 @@ function ResponsiveAppBar() {
             ))}
              
           
-          </Box>
-
-          <Box sx={{ flexGrow: 0 }}>
-         
-                <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
-           
-         
           </Box>
         </Toolbar>
       </Container>

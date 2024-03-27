@@ -1,21 +1,15 @@
-import React, { useState, useEffect } from "react";
-import Typography from '@mui/material/Typography';
+import React, { useEffect, useState } from "react";
 
-const cities = [
-  { name: "Dunedin", country: "NZ" },
-  { name: "Queenstown", country: "NZ" },
-  { name: "Wanaka", country: "NZ" }
-];
-
-function WeatherData() {
-  let ignore = false;
-  const apiKey = "436c0534ff8a64f66e7aa7d10c43b902"; 
-  const [city, setCity] = useState(cities[0]);
+function WeatherData({ city }) {
+  const apiKey = "436c0534ff8a64f66e7aa7d10c43b902"; // Moved apiKey inside component
+  const country = 'NZ'; // Moved country inside component
   const [weatherData, setWeatherData] = useState(null);
 
   useEffect(() => {
+    let ignore = false;
+
     fetch(
-      `https://api.openweathermap.org/data/2.5/weather?q=${city.name},${city.country}&appid=${apiKey}`
+      `https://api.openweathermap.org/data/2.5/weather?q=${city},${country}&appid=${apiKey}`
     )
       .then((response) => response.json())
       .then((json) => {
@@ -29,45 +23,22 @@ function WeatherData() {
     return () => {
       ignore = true;
     };
-  }, [city, apiKey]);
-
-  const options = cities.map((c) => (
-    <option value={c.name} key={c.name}>
-      {c.name}
-    </option>
-  ));
-
-  const Temp = weatherData ? (Math.floor(weatherData.main.temp - 273.15)) : 'N/A';
+  }, [city]);
+  
 
   return (
-    <div className="WeatherData componentBox">
-      <Typography variant="h4" gutterBottom>
-        City Weather
-      </Typography>
-      <label className="lbl-curr">
-        Choose city:
-        <select
-          className="select-curr"
-          value={city.name}
-          onChange={(e) => {
-            const selectedCity = cities.find(c => c.name === e.target.value);
-            setCity(selectedCity);
-          }}
-        >
-          {options}
-        </select>
-      </label>
-      <div>
-        {weatherData && (
-          <>
-            <p className="r-result">Temperature: {Temp}°C</p>
-            <p className="r-result">Humidity: {weatherData.main.humidity}%</p>
-            <p className="r-result">Main Weather Type: {weatherData.weather[0].main}</p>
-          </>
-        )}
-      </div>
+    <div>
+      {weatherData && (
+        <div>
+          <h2>Weather in {city}</h2>
+          <p>Temperature: {Math.floor((weatherData.main.temp)-273.15)} C</p>
+          <p>Humidity: {weatherData.main.humidity}%</p>
+          <p>Main Weather Type: {weatherData.weather[0].main}</p>
+        </div>
+      )}
     </div>
   );
 }
 
 export default WeatherData;
+

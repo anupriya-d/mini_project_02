@@ -1,4 +1,6 @@
 import Banner from "../components/Banner";
+import SwipeableTextMobileStepper from "../components/SwipeableTextMobileStepper";
+
 
 export default function Homepage() {
   // Save in pages/Homepage.jsx
@@ -8,8 +10,9 @@ export default function Homepage() {
   
     </div>
    <Banner/>
-  
 
+
+   <SwipeableTextMobileStepper/>
     </>
   );
 }

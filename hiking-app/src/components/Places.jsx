@@ -1,35 +1,70 @@
 import React from 'react';
 import { Grid, Typography, Card, CardContent, CardMedia,Button } from '@mui/material';
+import { Link } from 'react-router-dom';
 
-const placesData = [
+export const placesData = [
   {
-    image: 'https://upload.wikimedia.org/wikipedia/commons/4/47/Skiing_In_Queenstown_Nz_%28137507635%29.jpeg',
-    name: 'Queenstown',
-    description: 'Queenstown, New Zealand, sits on the shores of the South Island’s Lake Wakatipu, set against the dramatic Southern Alps. Renowned for adventure sports, it’s also a base for exploring the region’s vineyards and historic mining towns.',
+    id: 0,
+    image: "https://upload.wikimedia.org/wikipedia/commons/4/47/Skiing_In_Queenstown_Nz_%28137507635%29.jpeg",
+    name: "Queenstown",
+    description: "Queenstown, New Zealand, sits on the shores of the South Island’s Lake Wakatipu, set against the dramatic Southern Alps. Renowned for adventure sports, it’s also a base for exploring the region’s vineyards and historic mining towns.",
+    thingsToDo: [
+      { image:"https://upload.wikimedia.org/wikipedia/commons/4/47/Skiing_In_Queenstown_Nz_%28137507635%29.jpeg", title: "Skydiving", description: "Experience the thrill of skydiving over Queenstown." },
+      { title: "Bungee Jumping", description: "Bungee jump off the Kawarau Gorge Suspension Bridge."},
+      
+    ]
   },
+
   {
-    image: 'https://upload.wikimedia.org/wikipedia/commons/8/8c/The_Alexandra_Bridge.jpg',
-    name: 'Alexandra',
-    description: 'Alexandra is a town in the Central Otago district of the South Island of New Zealand. It is on the banks of the Clutha River, on State Highway 8, 188 kilometres by road from Dunedin and 33 kilometres south of Cromwell.',
+    id: 1,
+    image: "https://upload.wikimedia.org/wikipedia/commons/8/8c/The_Alexandra_Bridge.jpg",
+    name: "Alexandra",
+    description: "Queenstown, New Zealand, sits on the shores of the South Island’s Lake Wakatipu, set against the dramatic Southern Alps. Renowned for adventure sports, it’s also a base for exploring the region’s vineyards and historic mining towns.",
+    thingsToDo: [
+      { title: "Skydiving", description: "Experience the thrill of skydiving over Queenstown." },
+      { title: "Bungee Jumping", description: "Bungee jump off the Kawarau Gorge Suspension Bridge."},
+      
+    ]
   },
+
   {
-    image: 'https://upload.wikimedia.org/wikipedia/commons/5/51/Old_Globe_Hotel_Building%2C_Cromwell%2C_New_Zealand.jpg',
-    name: 'Cromwell',
-    description: 'Cromwell is a town in Central Otago region of the South Island of New Zealand. Cromwell is located on the shores of Lake Dunstan where the Kawarau river joins Lake Dunstan.',
+    id: 2,
+    image: "https://upload.wikimedia.org/wikipedia/commons/4/4d/Deadmans_Point_Bridge_Lake_Dunstan_Cromwell.jpg",
+    name: "Cromwell",
+    description: "Queenstown, New Zealand, sits on the shores of the South Island’s Lake Wakatipu, set against the dramatic Southern Alps. Renowned for adventure sports, it’s also a base for exploring the region’s vineyards and historic mining towns.",
+    thingsToDo: [
+      { title: "Skydiving", description: "Experience the thrill of skydiving over Queenstown." },
+      { title: "Bungee Jumping", description: "Bungee jump off the Kawarau Gorge Suspension Bridge."},
+      
+    ]
   },
+
   {
-    image: 'https://upload.wikimedia.org/wikipedia/commons/9/9a/Lake_Wanaka_Tree.jpg',
-    name: 'Wanaka',
-    description: "Wanaka, a resort town on New Zealand's South Island, is set on the southern end of its namesake lake with views of snowcapped mountains. It's the gateway to the Southern Alps' Mount Aspiring National Park, a wilderness of glaciers, beech forests and alpine lakes.",
+    id: 3,
+    image: "https://upload.wikimedia.org/wikipedia/commons/f/fa/NZ250315_Lake_Wanaka_01.jpg",
+    name: "Wanaka",
+    description: "Queenstown, New Zealand, sits on the shores of the South Island’s Lake Wakatipu, set against the dramatic Southern Alps. Renowned for adventure sports, it’s also a base for exploring the region’s vineyards and historic mining towns.",
+    thingsToDo: [
+      { title: "Skydiving", description: "Experience the thrill of skydiving over Queenstown." },
+      { title: "Bungee Jumping", description: "Bungee jump off the Kawarau Gorge Suspension Bridge."},
+      
+    ]
   },
+ 
 ];
 
-const Places = () => {
+
+function Places() {
   return (
     <Grid container spacing={3}>
       {placesData.map((place, index) => (
         <Grid item xs={12}  md={3} key={index}>
-          <Card sx={{ }}>
+          <Card  sx={{
+              transition: 'transform 0.3s',
+              '&:hover': {
+                transform: 'scale(1.05)',
+              },
+            }}>
             <CardMedia
               component="img"
               height="200"
@@ -44,7 +79,7 @@ const Places = () => {
                 {place.description}
               </Typography>
               <div>
-              <Button>SEE More</Button>
+              <Button component={Link} to={`/city/${index}`} variant="contained" color="primary">See More</Button>
               </div>
             </CardContent>
 

@@ -12,10 +12,10 @@ import MenuItem from '@mui/material/MenuItem';
 import { NavLink } from 'react-router-dom';
 import { pages } from '../pages/pages';
 import campingLogo from '../assets/camping.png'
+import ThemeSwitcher from '../components/ThemeSwitcher';
 
 
-
-function ResponsiveAppBar() {
+function ResponsiveAppBar({onChangeTheme}) {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
 
 
@@ -113,6 +113,9 @@ function ResponsiveAppBar() {
             ))}
              
           
+          </Box>
+          <Box sx={{ flexGrow: 1, justifySelf: 'flex-end', textAlign: 'right' }}>
+            <ThemeSwitcher onChangeTheme={onChangeTheme}/>            
           </Box>
         </Toolbar>
       </Container>

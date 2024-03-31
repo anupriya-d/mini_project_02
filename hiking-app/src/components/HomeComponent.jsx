@@ -1,7 +1,7 @@
 import React from 'react';
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
-import SwipeableTextMobileStepper1 from './SwipeableTextMobileStepper1';
+import SwipeableTextMobileStepper from './SwipeableTextMobileStepper';
 import AccordionExpandIcon from './AccordionExpandIcon';
 
 function HomeComponent() {
@@ -12,7 +12,7 @@ function HomeComponent() {
        
         <Grid item md={6} sm={6} xs={12}>
           <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-            <SwipeableTextMobileStepper1 />
+            <SwipeableTextMobileStepper />
           </Box>
         </Grid>
         <Grid item md={6} sm={6} xs={12}>

@@ -5,7 +5,7 @@ import { createTheme } from "@mui/material/styles";
 export const orangeThemeSettings = {
     palette: {
         primary: {
-            main: '#e28743',
+            main: '#d15d0a',
             contrastText: '#efefef'
         },
         secondary: {
